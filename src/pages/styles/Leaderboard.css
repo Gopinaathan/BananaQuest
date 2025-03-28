@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Righteous&display=swap");
+
+.scoreboard-container {
+  min-height: 100vh;
+  padding: 80px 1rem 2rem;
+  background: linear-gradient(135deg, #fff7e0 0%, #ffe0b2 100%);
+  font-family: "Righteous", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scoreboard-title {
+  font-family: "Bungee", cursive;
+  font-size: 2.5rem;
+  color: #ff6d00;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 3px 3px 0px rgba(255, 166, 0, 0.3);
+}
+
+.level-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+}
+
+.level-tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  color: #ff6d00;
+  font-family: "Righteous", cursive;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.level-tab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 166, 0, 0.2);
+}
+
+.level-tab.active {
+  background: #ff6d00;
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 166, 0, 0.3);
+}
+
+.table-container {
+  width: 100%;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(255, 166, 0, 0.15);
+}
+
+.scoreboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.scoreboard-table th {
+  padding: 1rem;
+  background: rgba(255, 166, 0, 0.1);
+  color: #ff6d00;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.scoreboard-table th:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.scoreboard-table th:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.scoreboard-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 166, 0, 0.1);
+}
+
+.scoreboard-table tr:last-child td {
+  border-bottom: none;
+}
+
+.trophy {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.top-1 {
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.top-2 {
+  background: rgba(192, 192, 192, 0.1);
+}
+
+.top-3 {
+  background: rgba(205, 127, 50, 0.1);
+}
+
+.scoreboard-table tr:hover {
+  background: rgba(255, 166, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+  .scoreboard-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .level-tabs {
+    gap: 0.5rem;
+  }
+
+  .level-tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .table-container {
+    padding: 1rem;
+  }
+
+  .scoreboard-table th,
+  .scoreboard-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .scoreboard-title {
+    font-size: 1.75rem;
+  }
+
+  .level-tab {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .table-container {
+    padding: 0.75rem;
+  }
+
+  .scoreboard-table th,
+  .scoreboard-table td {
+    padding: 0.5rem 0.4rem;
+    font-size: 0.8rem;
+  }
+
+  .trophy {
+    font-size: 1.2rem;
+  }
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scoreboard-container {
+  animation: slideIn 0.5s ease-out;
+}
+
+.level-tab {
+  position: relative;
+  overflow: hidden;
+}
+
+.level-tab::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff6d00;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.level-tab:hover::after {
+  transform: scaleX(1);
+}

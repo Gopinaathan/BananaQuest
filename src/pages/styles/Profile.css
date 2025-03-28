@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Righteous&display=swap");
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff7e0 0%, #ffe0b2 100%);
+  padding: 20px;
+  position: relative;
+}
+
+.profile-card {
+  background: #ffffff;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(255, 166, 0, 0.1);
+  text-align: center;
+  width: 450px;
+  height: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.profile-title {
+  font-family: "Bungee", cursive;
+  font-size: 2rem;
+  color: #ff6d00;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 0px rgba(255, 166, 0, 0.2);
+}
+
+.profile-info {
+  font-family: "Righteous", cursive;
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #666;
+}
+
+.profile-photo-container {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 3px 10px rgba(255, 166, 0, 0.2);
+}
+
+.avatar-selection-container {
+  margin: 1rem 0;
+  padding: 0.5rem;
+}
+
+.section-label {
+  font-family: "Righteous", cursive;
+  color: #ff8f00;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.avatar-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.avatar-option {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+  background-color: white;
+}
+
+.avatar-option:hover {
+  transform: scale(1.1);
+}
+
+.avatar-option.selected {
+  border-color: #ff6d00;
+  box-shadow: 0 0 5px rgba(255, 109, 0, 0.5);
+}
+
+.profile-info-container {
+  margin: 1rem auto;
+  width: 80%;
+  text-align: center;
+}
+
+.info-row {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-label {
+  font-family: "Righteous", cursive;
+  color: #ff8f00;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.info-value {
+  font-family: "Righteous", cursive;
+  color: #555;
+  font-size: 1.1rem;
+  margin: 0;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px dashed rgba(255, 166, 0, 0.2);
+  width: 100%;
+  text-align: center;
+}
+
+.info-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 166, 0, 0.3);
+  border-radius: 5px;
+  font-family: "Righteous", cursive;
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+}
+
+.info-input:focus {
+  outline: none;
+  border-color: #ff6d00;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.game-btn {
+  font-family: "Righteous", cursive;
+  font-size: 1rem;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+  background: linear-gradient(45deg, #ffa000, #ffb300);
+  color: white;
+  box-shadow: 0 3px 10px rgba(255, 166, 0, 0.2);
+  min-width: 120px;
+}
+
+.game-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 166, 0, 0.3);
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.loading-icon {
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(255, 166, 0, 0.2);
+  border-radius: 50%;
+  border-top: 3px solid #ff6d00;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 1.5rem;
+  }
+
+  .profile-title {
+    font-size: 1.75rem;
+  }
+}
+

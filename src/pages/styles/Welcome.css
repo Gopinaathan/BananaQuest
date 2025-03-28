@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Righteous&display=swap");
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #fff7e0 0%, #ffe0b2 100%);
+  padding: 20px;
+  position: relative;
+}
+
+.welcome-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(255, 166, 0, 0.1);
+  z-index: 1;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.welcome-title {
+  font-family: "Bungee", cursive;
+  font-size: 3.5rem;
+  color: #ff6d00;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-shadow: 3px 3px 0px rgba(255, 166, 0, 0.3);
+}
+
+.title-special {
+  display: block;
+  font-size: 4.5rem;
+  color: #ffa000;
+  text-shadow: 3px 3px 0px #ff6d00, 6px 6px 0px rgba(255, 166, 0, 0.3);
+}
+
+.quote-container {
+  font-family: "Righteous", cursive;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.welcome-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.game-btn {
+  font-family: "Righteous", cursive;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #ffa000, #ffb300);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 166, 0, 0.3);
+}
+
+.btn-secondary {
+  background: white;
+  color: #ffa000;
+  border: 3px solid #ffa000;
+  box-shadow: 0 4px 15px rgba(255, 166, 0, 0.2);
+}
+
+.game-btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #ff8f00, #ffa000);
+  box-shadow: 0 6px 20px rgba(255, 166, 0, 0.4);
+}
+
+.btn-secondary:hover {
+  background: #ffa000;
+  color: white;
+  box-shadow: 0 6px 20px rgba(255, 166, 0, 0.3);
+}
+
+.decoration-element {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(45deg, #ffb300, #ffd54f);
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.decoration-element.left {
+  top: -100px;
+  left: -100px;
+}
+
+.decoration-element.right {
+  bottom: -100px;
+  right: -100px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-title {
+    font-size: 2.5rem;
+  }
+
+  .title-special {
+    font-size: 3.5rem;
+  }
+
+  .welcome-buttons {
+    flex-direction: column;
+  }
+
+  .game-btn {
+    width: 100%;
+  }
+}

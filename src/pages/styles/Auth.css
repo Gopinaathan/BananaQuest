@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Righteous&display=swap");
+
+.auth-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #fff7e0 0%, #ffe0b2 100%);
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.auth-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(255, 166, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  max-height: 550px;
+  margin: auto;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.auth-title {
+  font-family: "Bungee", cursive;
+  font-size: 2rem;
+  color: #ff6d00;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 0px rgba(255, 166, 0, 0.3);
+}
+
+.auth-subtitle {
+  font-family: "Righteous", cursive;
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.input-group label {
+  font-family: "Righteous", cursive;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.input-group input {
+  padding: 0.75rem;
+  border: 2px solid #ffb300;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #ff6d00;
+  box-shadow: 0 0 0 3px rgba(255, 166, 0, 0.2);
+}
+
+.auth-button {
+  font-family: "Righteous", cursive;
+  background: linear-gradient(45deg, #ffa000, #ffb300);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.auth-button:hover {
+  background: linear-gradient(45deg, #ff8f00, #ffa000);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 166, 0, 0.3);
+}
+
+.error-message {
+  color: #ff3d00;
+  font-size: 0.9rem;
+  text-align: center;
+  background: rgba(255, 61, 0, 0.1);
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.auth-switch {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-family: "Righteous", cursive;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.switch-button {
+  background: none;
+  border: none;
+  color: #ff6d00;
+  font-family: "Righteous", cursive;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.switch-button:hover {
+  color: #ff8f00;
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 1.5rem;
+  }
+
+  .auth-title {
+    font-size: 1.75rem;
+  }
+
+  .auth-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .input-group input {
+    padding: 0.6rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .auth-card {
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 769px) {
+  .auth-card {
+    max-width: 400px;
+  }
+}
+
+/* Add these new styles to your existing Auth.css */
+
+.auth-card.success {
+  animation: successPulse 1s ease;
+  background: rgba(255, 255, 255, 0.98);
+}
+
+@keyframes successPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.success-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  color: #4CAF50;
+  font-family: "Righteous", cursive;
+  font-size: 1.2rem;
+}
+
+.checkmark {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 1rem;
+}
+
+.checkmark-circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #4CAF50;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark-check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  stroke: #4CAF50;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Add this to make sure the form transitions smoothly */
+.auth-form {
+  transition: all 0.9s ease;
+}

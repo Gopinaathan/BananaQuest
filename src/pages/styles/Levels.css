@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Righteous&display=swap");
+
+.levels-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff7e0 0%, #ffe0b2 100%);
+  padding: 2rem;
+  font-family: "Righteous", cursive;
+}
+
+.levels-title {
+  font-family: "Bungee", cursive;
+  font-size: 3rem;
+  color: #ff6d00;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 3px 3px 0px rgba(255, 166, 0, 0.3);
+}
+
+.levels-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.level-button {
+  width: 100%;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 15px;
+  font-family: "Righteous", cursive;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.level-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.level-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.level-description {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.easy {
+  background: linear-gradient(45deg, #4caf50, #8bc34a);
+}
+
+.medium {
+  background: linear-gradient(45deg, #ffa000, #ffb300);
+}
+
+.hard {
+  background: linear-gradient(45deg, #f44336, #ff5722);
+}
+
+@media (max-width: 480px) {
+  .levels-title {
+    font-size: 2.5rem;
+  }
+
+  .level-button {
+    padding: 1.2rem;
+  }
+
+  .level-name {
+    font-size: 1.3rem;
+  }
+
+  .level-description {
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.level-button:focus {
+  outline: none;
+  animation: pulse 0.5s ease-in-out;
+}
+
