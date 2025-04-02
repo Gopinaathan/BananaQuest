@@ -18,8 +18,7 @@ Ensure you have Node.js and npm installed.
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/banana-quest.git
-   cd banana-quest
+   git clone https://github.com/Gopinaathan/BananaQuest.git
    ```
 2. Install dependencies:
    ```bash
