@@ -44,8 +44,7 @@ Ensure you have Node.js and npm installed.
 ## Contributing
 Feel free to fork the repository and submit pull requests to improve the game.
 
-## License
-This project is licensed under the MIT License.
+
 
 
 
